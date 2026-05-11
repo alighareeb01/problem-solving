@@ -29,3 +29,12 @@ class Solution {
     return prev;
   }
 }
+
+function printList(head) {
+  let curr = head;
+  while (curr != null) {
+    process.stdout.write(curr.val + " -> ");
+    curr = curr.next;
+  }
+  log(null);
+}
