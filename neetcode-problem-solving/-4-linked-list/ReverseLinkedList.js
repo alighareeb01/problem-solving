@@ -8,28 +8,24 @@
  * }
  */
 
-
 class Solution {
-    /**
-     * @param {ListNode} head
-     * @return {ListNode}
-     */
-    reverseList(head) {
-        let current  = head;
-        let prev = null;
-        let next= head;
-        
-        if(head === null )
-        {
-            return head;
-        }
-        while(current)
-        {
-            next  = current.next;
-            current.next = prev;
-            prev = current
-            current = next;
-        }
-       return prev;
+  /**
+   * @param {ListNode} head
+   * @return {ListNode}
+   */
+  reverseList(head) {
+    let curr = head;
+    let prev = null;
+    let next = head;
+    if (head === null) {
+      return head;
     }
+    while (curr !== null) {
+      next = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = next;
+    }
+    return prev;
+  }
 }
